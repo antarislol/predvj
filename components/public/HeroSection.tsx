@@ -119,10 +119,10 @@ export default function HeroSection() {
           style={{ color: "#8A8480", fontFamily: "'Montserrat', sans-serif" }}
         >
           Prepare o coração para viver um tempo de comunhão, crescimento e renovação.
-          Faça sua pré-inscrição e acompanhe as próximas informações do congresso.
+          Confirme sua presença e acompanhe as próximas informações do congresso.
         </motion.p>
 
-        {/* Selo pré-inscrições abertas */}
+        {/* Selo confirmações de presença abertas */}
         <motion.div
           custom={4}
           variants={fadeUp}
@@ -139,7 +139,7 @@ export default function HeroSection() {
               fontFamily: "'Montserrat', sans-serif",
             }}
           >
-            ✦ Pré-inscrições abertas ✦
+            ✦ Confirmações de presença abertas ✦
           </div>
         </motion.div>
 
@@ -156,7 +156,7 @@ export default function HeroSection() {
             className="btn-primary text-sm w-full sm:w-auto"
             id="hero-inscricao-btn"
           >
-            ✦ Quero fazer minha pré-inscrição
+            ✦ Quero confirmar minha presença
           </button>
           <button
             onClick={scrollToSobre}
@@ -176,7 +176,7 @@ export default function HeroSection() {
           className="text-xs max-w-sm mx-auto leading-relaxed"
           style={{ color: "#8A8480", fontFamily: "'Montserrat', sans-serif" }}
         >
-          A pré-inscrição demonstra seu interesse em participar, mas ainda não representa
+          A confirmação de presença demonstra seu interesse em participar, mas ainda não representa
           a confirmação definitiva da vaga.
         </motion.p>
       </div>

@@ -20,7 +20,7 @@ import { SmallFlower } from "@/components/ui/FloralElements";
 
 const menuItems = [
   { href: "/admin", label: "Visão geral", icon: LayoutDashboard },
-  { href: "/admin/pre-inscricoes", label: "Pré-inscrições", icon: Users },
+  { href: "/admin/pre-inscricoes", label: "Confirmações de presença", icon: Users },
   { href: "/admin/configuracoes", label: "Configurações", icon: Settings },
 ];
 

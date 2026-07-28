@@ -3,25 +3,25 @@ import "./globals.css";
 import { AuthProvider } from "@/hooks/useAuth";
 
 export const metadata: Metadata = {
-  title: "DVJ — De Volta ao Jardim | Pré-inscrição",
+  title: "DVJ — De Volta ao Jardim | Confirmação de presença",
   description:
-    "Faça sua pré-inscrição para o DVJ — De Volta ao Jardim, um congresso de mulheres voltado para comunhão, Palavra, presença e propósito.",
+    "Confirme sua presença para o DVJ — De Volta ao Jardim, um congresso de mulheres voltado para comunhão, Palavra, presença e propósito.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
-  keywords: ["DVJ", "De Volta ao Jardim", "congresso de mulheres", "cristão", "pré-inscrição", "evento feminino"],
+  keywords: ["DVJ", "De Volta ao Jardim", "congresso de mulheres", "cristão", "confirmação de presença", "evento feminino"],
   authors: [{ name: "DVJ — De Volta ao Jardim" }],
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    title: "DVJ — De Volta ao Jardim | Pré-inscrição",
+    title: "DVJ — De Volta ao Jardim | Confirmação de presença",
     description:
-      "Faça sua pré-inscrição para o DVJ — De Volta ao Jardim, um congresso de mulheres voltado para comunhão, Palavra, presença e propósito.",
+      "Confirme sua presença para o DVJ — De Volta ao Jardim, um congresso de mulheres voltado para comunhão, Palavra, presença e propósito.",
     siteName: "DVJ — De Volta ao Jardim",
   },
   twitter: {
     card: "summary_large_image",
-    title: "DVJ — De Volta ao Jardim | Pré-inscrição",
+    title: "DVJ — De Volta ao Jardim | Confirmação de presença",
     description:
-      "Faça sua pré-inscrição para o DVJ — De Volta ao Jardim, um congresso de mulheres voltado para comunhão, Palavra, presença e propósito.",
+      "Confirme sua presença para o DVJ — De Volta ao Jardim, um congresso de mulheres voltado para comunhão, Palavra, presença e propósito.",
   },
   robots: {
     index: true,

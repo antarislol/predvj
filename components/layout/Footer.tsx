@@ -60,7 +60,7 @@ export default function Footer() {
                 { href: "#inicio", label: "Início" },
                 { href: "#sobre", label: "Sobre o DVJ" },
                 { href: "#congresso", label: "O Congresso" },
-                { href: "#pre-inscricao", label: "Pré-inscrição" },
+                { href: "#pre-inscricao", label: "Confirmação de presença" },
                 { href: "#duvidas", label: "Dúvidas" },
               ].map((link) => (
                 <a

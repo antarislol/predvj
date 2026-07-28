@@ -34,7 +34,7 @@ export default function PoliticaPrivacidadePage() {
             </h2>
             <p>
               O DVJ — De Volta ao Jardim é um congresso cristão voltado para mulheres. Este site é utilizado exclusivamente
-              para a coleta de pré-inscrições e comunicação com as interessadas em participar do evento.
+              para a coleta de confirmações de presença e comunicação com as interessadas em participar do evento.
             </p>
           </section>
 
@@ -42,7 +42,7 @@ export default function PoliticaPrivacidadePage() {
             <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.4rem", fontWeight: 600, color: "#3D3A36", marginBottom: "0.5rem" }}>
               2. Quais informações coletamos
             </h2>
-            <p>Ao realizar sua pré-inscrição, coletamos as seguintes informações:</p>
+            <p>Ao realizar sua presença, coletamos as seguintes informações:</p>
             <ul className="list-disc list-inside space-y-1 mt-2">
               <li>Nome completo</li>
               <li>Telefone / WhatsApp</li>

@@ -60,7 +60,7 @@ export default function BeneficiosSection() {
             </h2>
 
             <p className="mb-8" style={{ color: "#5C5751", lineHeight: 1.8, fontFamily: "'Montserrat', sans-serif", fontSize: "0.95rem" }}>
-              Ao preencher sua pré-inscrição, você demonstra interesse em participar do DVJ
+              Ao preencher sua presença, você demonstra interesse em participar do DVJ
               e permite que a organização entre em contato assim que as próximas etapas
               forem liberadas.
             </p>
@@ -70,7 +70,7 @@ export default function BeneficiosSection() {
               className="btn-primary"
               id="beneficios-cta-btn"
             >
-              ✦ Fazer minha pré-inscrição
+              ✦ confirmar minha presença
             </button>
           </motion.div>
 
@@ -129,7 +129,7 @@ export default function BeneficiosSection() {
                   color: "#59613A",
                 }}
               >
-                A pré-inscrição é{" "}
+                A confirmação de presença é{" "}
                 <span style={{ fontFamily: "'Great Vibes', cursive", fontSize: "1.6rem" }}>
                   gratuita
                 </span>

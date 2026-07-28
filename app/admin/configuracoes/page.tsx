@@ -37,7 +37,7 @@ const CONFIG_DEFAULTS: Configuracoes = {
   mensagemConfirmacao: "Seus dados foram registrados. Entraremos em contato em breve.",
   limiteInscricoes: 0,
   formulariosAtivos: true,
-  mensagemPausado: "As pré-inscrições estão temporariamente indisponíveis. Acompanhe nossos canais oficiais para novas informações.",
+  mensagemPausado: "As confirmações de presença estão temporariamente indisponíveis. Acompanhe nossos canais oficiais para novas informações.",
 };
 
 export default function ConfiguracoesPage() {
@@ -111,10 +111,10 @@ export default function ConfiguracoesPage() {
           <div className="flex items-center justify-between">
             <div>
               <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.875rem", fontWeight: 600, color: "#3D3A36" }}>
-                Formulário de pré-inscrição
+                Formulário de confirmação de presença
               </p>
               <p className="text-xs mt-0.5" style={{ color: "#8A8480", fontFamily: "'Montserrat', sans-serif" }}>
-                {config.formulariosAtivos ? "Ativo — aceitando pré-inscrições" : "Pausado — formulário desativado"}
+                {config.formulariosAtivos ? "Ativo — aceitando confirmações de presença" : "Pausado — formulário desativado"}
               </p>
             </div>
             <button
@@ -136,7 +136,7 @@ export default function ConfiguracoesPage() {
         {/* Limite de inscrições */}
         <div className="p-5 rounded-2xl" style={{ background: "white", border: "1px solid rgba(185,137,66,0.15)" }}>
           <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.8rem", fontWeight: 600, color: "#5C5751" }}>
-            Limite de pré-inscrições (0 = ilimitado)
+            Limite de confirmações de presença (0 = ilimitado)
           </label>
           <input
             type="number"

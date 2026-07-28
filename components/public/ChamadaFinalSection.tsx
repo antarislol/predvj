@@ -92,7 +92,7 @@ export default function ChamadaFinalSection() {
           className="mb-10"
           style={{ color: "rgba(247,242,234,0.75)", fontFamily: "'Montserrat', sans-serif", fontSize: "0.95rem", lineHeight: 1.7 }}
         >
-          Faça sua pré-inscrição e prepare-se para viver um tempo de
+          Confirme sua presença e prepare-se para viver um tempo de
           <br className="hidden sm:block" /> presença, comunhão e renovação.
         </motion.p>
 

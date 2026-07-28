@@ -66,7 +66,7 @@ export async function verificarDuplicidade(email: string, telefone: string): Pro
   return false;
 }
 
-// Cria nova pré-inscrição
+// Cria nova confirmação de presença
 export async function criarPreInscricao(data: Omit<PreInscricao, "id" | "status" | "createdAt" | "updatedAt">): Promise<string> {
   const docRef = await addDoc(collection(db, COLLECTION_NAME), {
     ...data,
@@ -77,7 +77,7 @@ export async function criarPreInscricao(data: Omit<PreInscricao, "id" | "status"
   return docRef.id;
 }
 
-// Busca todas as pré-inscrições (admin)
+// Busca todas as confirmações de presença (admin)
 export async function buscarPreInscricoes(
   filtros?: {
     status?: string;
@@ -108,7 +108,7 @@ export async function buscarPreInscricoes(
   return { docs, lastDoc: snap.docs[snap.docs.length - 1] };
 }
 
-// Busca pré-inscrição por ID
+// Busca confirmação de presença por ID
 export async function buscarPreInscricaoPorId(id: string): Promise<PreInscricao | null> {
   const docRef = doc(db, COLLECTION_NAME, id);
   const snap = await getDoc(docRef);
@@ -116,7 +116,7 @@ export async function buscarPreInscricaoPorId(id: string): Promise<PreInscricao 
   return { id: snap.id, ...snap.data() } as PreInscricao;
 }
 
-// Atualiza status/dados de uma pré-inscrição
+// Atualiza status/dados de uma confirmação de presença
 export async function atualizarPreInscricao(id: string, data: Partial<PreInscricao>): Promise<void> {
   const docRef = doc(db, COLLECTION_NAME, id);
   await updateDoc(docRef, {

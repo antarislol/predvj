@@ -11,9 +11,9 @@ import FaqSection from "@/components/public/FaqSection";
 import ChamadaFinalSection from "@/components/public/ChamadaFinalSection";
 
 export const metadata: Metadata = {
-  title: "DVJ — De Volta ao Jardim | Pré-inscrição",
+  title: "DVJ — De Volta ao Jardim | Confirmação de presença",
   description:
-    "Faça sua pré-inscrição para o DVJ — De Volta ao Jardim, um congresso de mulheres voltado para comunhão, Palavra, presença e propósito.",
+    "Confirme sua presença para o DVJ — De Volta ao Jardim, um congresso de mulheres voltado para comunhão, Palavra, presença e propósito.",
 };
 
 export default function Home() {

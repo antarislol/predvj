@@ -8,12 +8,12 @@ import { SmallFlower } from "@/components/ui/FloralElements";
 
 const faqItems = [
   {
-    pergunta: "A pré-inscrição já garante minha vaga?",
-    resposta: "Não. A pré-inscrição registra seu interesse em participar. A confirmação dependerá das próximas etapas divulgadas pela organização.",
+    pergunta: "A confirmação de presença já garante minha vaga?",
+    resposta: "Não. A confirmação de presença registra seu interesse em participar. A confirmação dependerá das próximas etapas divulgadas pela organização.",
   },
   {
     pergunta: "Preciso pagar alguma coisa agora?",
-    resposta: "Não. Nenhum pagamento será solicitado durante a pré-inscrição.",
+    resposta: "Não. Nenhum pagamento será solicitado durante a confirmação de presença.",
   },
   {
     pergunta: "Por que preciso informar meus dados?",
@@ -28,8 +28,8 @@ const faqItems = [
     resposta: "A equipe entrará em contato quando as datas, programação e inscrições definitivas forem divulgadas.",
   },
   {
-    pergunta: "Posso fazer a pré-inscrição para outra pessoa?",
-    resposta: "Cada participante deve realizar sua própria pré-inscrição com dados pessoais e meios de contato válidos.",
+    pergunta: "Posso confirmar presença para outra pessoa?",
+    resposta: "Cada participante deve realizar sua própria confirmação de presença com dados pessoais e meios de contato válidos.",
   },
 ];
 

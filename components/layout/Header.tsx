@@ -9,7 +9,7 @@ const navLinks = [
   { href: "#inicio", label: "Início" },
   { href: "#sobre", label: "Sobre o DVJ" },
   { href: "#congresso", label: "O Congresso" },
-  { href: "#pre-inscricao", label: "Pré-inscrição" },
+  { href: "#pre-inscricao", label: "Confirmação de presença" },
   { href: "#duvidas", label: "Dúvidas" },
 ];
 
@@ -73,7 +73,7 @@ export default function Header() {
                 style={{ minHeight: "auto", padding: "0.6rem 1.4rem" }}
                 id="header-cta-btn"
               >
-                Fazer pré-inscrição
+                Fazer confirmação de presença
               </a>
             </nav>
 
@@ -129,7 +129,7 @@ export default function Header() {
                   className="btn-primary w-full"
                   id="mobile-cta-btn"
                 >
-                  Fazer pré-inscrição
+                  Fazer confirmação de presença
                 </a>
               </div>
             </div>

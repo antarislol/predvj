@@ -62,7 +62,7 @@ export default function AdminDashboard() {
 
   const cards = stats
     ? [
-        { label: "Total de pré-inscrições", valor: stats.total, icon: Users, cor: "#59613A" },
+        { label: "Total de confirmações de presença", valor: stats.total, icon: Users, cor: "#59613A" },
         { label: "Hoje", valor: stats.hoje, icon: Calendar, cor: "#B98942" },
         { label: "Últimos 7 dias", valor: stats.semana, icon: TrendingUp, cor: "#BE745B" },
         { label: "Este mês", valor: stats.mes, icon: TrendingUp, cor: "#8D9875" },
@@ -126,11 +126,11 @@ export default function AdminDashboard() {
             </div>
           )}
 
-          {/* Últimas pré-inscrições */}
+          {/* Últimas confirmações de presença */}
           <div className="rounded-2xl overflow-hidden" style={{ background: "white", border: "1px solid rgba(185,137,66,0.12)" }}>
             <div className="p-5 border-b" style={{ borderColor: "rgba(185,137,66,0.12)" }}>
               <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.2rem", fontWeight: 600, color: "#3D3A36" }}>
-                Últimas pré-inscrições
+                Últimas confirmações de presença
               </h2>
             </div>
             <div className="divide-y" style={{ borderColor: "rgba(185,137,66,0.08)" }}>
@@ -161,7 +161,7 @@ export default function AdminDashboard() {
                 <div className="p-8 text-center">
                   <SmallFlower size={32} color="#8D9875" className="mx-auto mb-2" />
                   <p style={{ color: "#8A8480", fontFamily: "'Montserrat', sans-serif", fontSize: "0.875rem" }}>
-                    Nenhuma pré-inscrição ainda.
+                    Nenhuma confirmação de presença ainda.
                   </p>
                 </div>
               )}

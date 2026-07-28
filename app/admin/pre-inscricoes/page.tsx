@@ -237,7 +237,7 @@ export default function PreInscricoesPage() {
       Observacoes: d.observacoes || "",
       Consentimento: d.consentimentoPrivacidade ? "Sim" : "Não",
       Status: STATUS_LABELS[d.status] || d.status,
-      "Data de pré-inscrição": formatarData(d.createdAt as { seconds: number } | null),
+      "Data de confirmação de presença": formatarData(d.createdAt as { seconds: number } | null),
     }));
     const hoje = new Date().toISOString().split("T")[0];
     exportarCSV(csvData, `pre-inscricoes-dvj-${hoje}.csv`);
@@ -252,7 +252,7 @@ export default function PreInscricoesPage() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
         <div>
           <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1.4rem, 3vw, 2rem)", fontWeight: 700, color: "#3D3A36" }}>
-            Pré-inscrições
+            Confirmações de presença
           </h1>
           <p className="text-sm mt-1" style={{ color: "#8A8480", fontFamily: "'Montserrat', sans-serif" }}>
             {filtrados.length} resultado{filtrados.length !== 1 ? "s" : ""}
@@ -366,7 +366,7 @@ export default function PreInscricoesPage() {
               <div className="p-12 text-center">
                 <SmallFlower size={36} color="#8D9875" className="mx-auto mb-3" />
                 <p style={{ color: "#8A8480", fontFamily: "'Montserrat', sans-serif", fontSize: "0.875rem" }}>
-                  Nenhuma pré-inscrição encontrada.
+                  Nenhuma confirmação de presença encontrada.
                 </p>
               </div>
             )}

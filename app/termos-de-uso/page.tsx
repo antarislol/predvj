@@ -32,17 +32,17 @@ export default function TermosUsoPage() {
               1. Sobre este site
             </h2>
             <p>
-              Este site tem como finalidade exclusiva a realização de pré-inscrições para o DVJ — De Volta ao Jardim,
+              Este site tem como finalidade exclusiva a realização de confirmações de presença para o DVJ — De Volta ao Jardim,
               um congresso cristão voltado para mulheres.
             </p>
           </section>
 
           <section>
             <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.4rem", fontWeight: 600, color: "#3D3A36", marginBottom: "0.5rem" }}>
-              2. Pré-inscrição
+              2. Confirmação de presença
             </h2>
             <p>
-              A pré-inscrição realizada por meio deste site não garante vaga no congresso.
+              A confirmação de presença realizada por meio deste site não garante vaga no congresso.
               Ela representa apenas a manifestação de interesse em participar do evento.
               A confirmação da inscrição dependerá das etapas a serem divulgadas pela organização.
             </p>
@@ -54,7 +54,7 @@ export default function TermosUsoPage() {
             </h2>
             <p>
               Ao se pré-inscrever, a participante declara que todas as informações fornecidas são
-              verdadeiras. O fornecimento de dados falsos pode resultar na exclusão da pré-inscrição.
+              verdadeiras. O fornecimento de dados falsos pode resultar na exclusão da confirmação de presença.
             </p>
           </section>
 
@@ -65,7 +65,7 @@ export default function TermosUsoPage() {
             <p>
               É proibido utilizar este site para qualquer finalidade ilegal, fraudulenta ou que contrarie
               os valores cristãos do DVJ. A organização reserva o direito de cancelar qualquer
-              pré-inscrição que viole esses termos.
+              confirmação de presença que viole esses termos.
             </p>
           </section>
 

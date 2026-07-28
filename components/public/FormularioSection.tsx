@@ -155,7 +155,7 @@ export default function FormularioSection() {
       window.scrollTo({ top: document.querySelector("#pre-inscricao")?.getBoundingClientRect().top! + window.scrollY - 80, behavior: "smooth" });
     } catch (err) {
       console.error(err);
-      setErroGlobal("Ocorreu um erro ao enviar sua pré-inscrição. Por favor, tente novamente.");
+      setErroGlobal("Ocorreu um erro ao enviar sua presença. Por favor, tente novamente.");
     } finally {
       setEnviando(false);
     }
@@ -177,12 +177,12 @@ export default function FormularioSection() {
           className="text-center mb-10"
         >
           <span className="selo mb-4 inline-flex">
-            <SmallFlower size={12} color="#B98942" /> Pré-inscrição
+            <SmallFlower size={12} color="#B98942" /> Confirmação de presença
           </span>
           <h2 className="mt-4 mb-3" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 600, color: "#3D3A36" }}>
             Faça sua{" "}
             <span style={{ fontFamily: "'Great Vibes', cursive", fontSize: "clamp(2.2rem, 5vw, 3.5rem)", color: "#59613A" }}>
-              pré-inscrição.
+              confirmação de presença.
             </span>
           </h2>
           <p style={{ color: "#8A8480", fontFamily: "'Montserrat', sans-serif", fontSize: "0.9rem", lineHeight: 1.7 }}>
@@ -474,7 +474,7 @@ export default function FormularioSection() {
               </button>
 
               <p className="mt-4 text-center text-xs" style={{ color: "#8A8480", fontFamily: "'Montserrat', sans-serif" }}>
-                Esta pré-inscrição ainda não confirma sua vaga no congresso.
+                Esta confirmação de presença ainda não confirma sua vaga no congresso.
               </p>
             </form>
           </div>
@@ -507,7 +507,7 @@ function ConfirmacaoEnviada() {
           </div>
 
           <h2 className="mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1.6rem, 4vw, 2.4rem)", fontWeight: 600, color: "#3D3A36" }}>
-            Sua pré-inscrição foi recebida! 🌿
+            Sua presença foi recebida! 🌿
           </h2>
 
           <p className="mb-3" style={{ color: "#5C5751", fontFamily: "'Montserrat', sans-serif", fontSize: "0.95rem", lineHeight: 1.7 }}>
@@ -520,7 +520,7 @@ function ConfirmacaoEnviada() {
 
           <div className="mb-8 p-4 rounded-xl" style={{ background: "rgba(185,137,66,0.08)", border: "1px solid rgba(185,137,66,0.2)" }}>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.8rem", color: "#B98942", fontWeight: 600 }}>
-              ⚠️ Esta pré-inscrição ainda não confirma sua vaga no congresso.
+              ⚠️ Esta confirmação de presença ainda não confirma sua vaga no congresso.
             </p>
           </div>
 
