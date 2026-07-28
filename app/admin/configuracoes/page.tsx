@@ -26,9 +26,9 @@ interface Configuracoes {
 const CONFIG_DEFAULTS: Configuracoes = {
   nomeCongresso: "DVJ — De Volta ao Jardim",
   frasePrincipal: "Um chamado para retornar à essência, à presença e ao propósito de Deus.",
-  data: "",
-  horario: "",
-  local: "",
+  data: "15/08/2026",
+  horario: "16h",
+  local: "Pibaçu Manhuaçu",
   endereco: "",
   programacao: "",
   instagram: "",

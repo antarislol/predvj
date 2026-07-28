@@ -7,12 +7,10 @@ import { Calendar, Clock, MapPin, Users, BookOpen, Mic } from "lucide-react";
 import { SmallFlower, FloralDivider } from "@/components/ui/FloralElements";
 
 const infoItems = [
-  { icon: Calendar, label: "Data", valor: "[DATA DO CONGRESSO]" },
-  { icon: Clock, label: "Horário", valor: "[HORÁRIO]" },
-  { icon: MapPin, label: "Local", valor: "[LOCAL]" },
-  { icon: MapPin, label: "Cidade", valor: "[CIDADE – UF]" },
-  { icon: BookOpen, label: "Programação", valor: "[PROGRAMAÇÃO]" },
-  { icon: Mic, label: "Preletoras", valor: "[PRELETORAS]" },
+  { icon: Calendar, label: "Data", valor: "15/08/2026" },
+  { icon: Clock, label: "Horário", valor: "16h" },
+  { icon: MapPin, label: "Local", valor: "Pibaçu Manhuaçu" },
+  { icon: Mic, label: "Preletora", valor: "Kássia Pacheco" },
 ];
 
 export default function InformacoesSection() {

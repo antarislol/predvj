@@ -84,27 +84,6 @@ export default function HeroSection() {
 
       {/* Conteúdo central */}
       <div className="relative z-10 text-center px-6 max-w-3xl mx-auto py-16">
-        {/* Imagem do logo enviada pelo usuário */}
-        <motion.div
-          custom={0}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          className="flex justify-center mb-6"
-        >
-          <div className="relative w-72 md:w-96 lg:w-[480px]">
-            <Image
-              src="/images/logo-dvj.png"
-              alt="DVJ — De Volta ao Jardim"
-              width={480}
-              height={320}
-              priority
-              className="w-full h-auto drop-shadow-sm"
-              style={{ objectFit: "contain" }}
-            />
-          </div>
-        </motion.div>
-
         {/* Selo superior */}
         <motion.div
           custom={1}
@@ -149,7 +128,7 @@ export default function HeroSection() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          className="flex justify-center mb-8"
+          className="flex justify-center mb-16"
         >
           <div
             className="px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase"

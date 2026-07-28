@@ -37,6 +37,7 @@ export default function ApresentacaoSection() {
             initial={{ opacity: 0, x: -40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-center md:text-left mx-auto max-w-lg md:max-w-none"
           >
             <h2
               className="mb-6"
@@ -73,9 +74,10 @@ export default function ApresentacaoSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="mt-8 pl-6 relative"
-              style={{ borderLeft: "3px solid #B98942" }}
+              className="mt-8 pl-0 md:pl-6 relative pt-4 md:pt-0"
+              style={{ borderLeft: "3px solid transparent" }}
             >
+              <div className="absolute left-0 top-0 w-full h-[3px] md:w-[3px] md:h-full bg-[#B98942]" />
               <p
                 style={{
                   fontFamily: "'Cormorant Garamond', serif",
