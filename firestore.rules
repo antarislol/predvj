@@ -1,0 +1,96 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ============================
+    // PRÉ-INSCRIÇÕES — Coleção pública para escrita, restrita para leitura
+    // ============================
+    match /pre_inscricoes_dvj/{docId} {
+
+      // Qualquer pessoa pode criar UMA pré-inscrição válida
+      allow create: if
+        // Campos obrigatórios presentes
+        request.resource.data.keys().hasAll([
+          'nomeCompleto', 'telefone', 'telefoneNormalizado', 'email',
+          'endereco', 'igreja', 'consentimentoPrivacidade',
+          'consentimentoComunicacao', 'status'
+        ]) &&
+
+        // Validações de tipo e tamanho
+        request.resource.data.nomeCompleto is string &&
+        request.resource.data.nomeCompleto.size() >= 3 &&
+        request.resource.data.nomeCompleto.size() <= 150 &&
+
+        request.resource.data.telefone is string &&
+        request.resource.data.telefone.size() >= 10 &&
+        request.resource.data.telefone.size() <= 20 &&
+
+        request.resource.data.email is string &&
+        request.resource.data.email.size() >= 5 &&
+        request.resource.data.email.size() <= 200 &&
+
+        request.resource.data.igreja is string &&
+        request.resource.data.igreja.size() >= 1 &&
+        request.resource.data.igreja.size() <= 200 &&
+
+        // Status deve ser o padrão ao criar
+        request.resource.data.status == 'pre_inscrita' &&
+
+        // Consentimento obrigatório deve ser true
+        request.resource.data.consentimentoPrivacidade == true &&
+
+        // Não permite campos extras além dos esperados
+        request.resource.data.keys().hasOnly([
+          'nomeCompleto', 'telefone', 'telefoneNormalizado', 'email',
+          'endereco', 'igreja', 'origem', 'observacoes',
+          'consentimentoPrivacidade', 'consentimentoComunicacao',
+          'status', 'utm', 'createdAt', 'updatedAt'
+        ]);
+
+      // Somente admins autenticados podem ler
+      allow read: if isAdmin();
+
+      // Somente admins podem atualizar
+      allow update: if isAdmin();
+
+      // Somente admins podem deletar
+      allow delete: if isAdmin();
+    }
+
+    // ============================
+    // ADMINS — Só leitura por admins autenticados
+    // ============================
+    match /admins/{uid} {
+      // Admin pode ler o próprio documento para verificar permissões
+      allow read: if request.auth != null && request.auth.uid == uid;
+      // Ninguém do cliente pode criar/editar documentos de admin
+      allow write: if false;
+    }
+
+    // ============================
+    // CONFIGURAÇÕES — Só admins podem ler e escrever
+    // ============================
+    match /configuracoes/{docId} {
+      allow read: if true; // Configs públicas podem ser lidas pelo site
+      allow write: if isAdmin();
+    }
+
+    // ============================
+    // Tudo mais é bloqueado
+    // ============================
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // ============================
+    // Função auxiliar: verifica se é admin autenticado e ativo
+    // ============================
+    function isAdmin() {
+      return request.auth != null &&
+             exists(/databases/$(database)/documents/admins/$(request.auth.uid)) &&
+             get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.role == 'admin' &&
+             get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.active == true;
+    }
+  }
+}

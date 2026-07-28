@@ -67,7 +67,7 @@ export async function verificarDuplicidade(email: string, telefone: string): Pro
 }
 
 // Cria nova pré-inscrição
-export async function criarPreInscricao(data: Omit<PreInscricao, "id" | "createdAt" | "updatedAt">): Promise<string> {
+export async function criarPreInscricao(data: Omit<PreInscricao, "id" | "status" | "createdAt" | "updatedAt">): Promise<string> {
   const docRef = await addDoc(collection(db, COLLECTION_NAME), {
     ...data,
     status: "pre_inscrita",

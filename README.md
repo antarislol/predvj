@@ -1,36 +1,188 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DVJ — De Volta ao Jardim 🌿
+**Landing page de pré-inscrição para o Congresso de Mulheres DVJ**
 
-## Getting Started
+---
 
-First, run the development server:
+## ⚡ Início rápido
 
 ```bash
+# Instale as dependências
+npm install
+
+# Configure as variáveis de ambiente
+cp .env.example .env.local
+# Edite .env.local com suas credenciais do Firebase
+
+# Inicie o servidor de desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse: [http://localhost:3000](http://localhost:3000)  
+Painel admin: [http://localhost:3000/admin](http://localhost:3000/admin)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔧 Configuração do Firebase
 
-## Learn More
+### 1. Variáveis de ambiente
+Edite o arquivo `.env.local`:
+```env
+NEXT_PUBLIC_FIREBASE_API_KEY=sua-api-key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=seu-projeto.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=seu-projeto
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=seu-projeto.firebasestorage.app
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=123456789
+NEXT_PUBLIC_FIREBASE_APP_ID=1:123:web:abc
+NEXT_PUBLIC_ADMIN_LOGIN_EMAIL=kamily@dvj.com.br
+NEXT_PUBLIC_SITE_URL=https://seudominio.com
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Criar a conta da Kamily no Firebase Authentication
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Acesse o [Firebase Console](https://console.firebase.google.com)
+2. Selecione o projeto **antarisflow**
+3. Vá em **Authentication > Users > Adicionar usuário**
+4. E-mail: `kamily@dvj.com.br` (ou o e-mail que você configurar em `NEXT_PUBLIC_ADMIN_LOGIN_EMAIL`)
+5. Senha inicial: `kamily123`
+6. Após criar, copie o **UID** do usuário
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3. Criar o documento de admin no Firestore
 
-## Deploy on Vercel
+No Firestore, crie o documento:
+```
+Coleção: admins
+Documento ID: [UID copiado acima]
+Campos:
+  nome: "Kamily"
+  username: "kamily"
+  role: "admin"
+  active: true
+  createdAt: [timestamp atual]
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 4. Publicar as regras do Firestore
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+# Instale o Firebase CLI (se não tiver)
+npm install -g firebase-tools
+
+# Faça login
+firebase login
+
+# Selecione o projeto
+firebase use antarisflow
+
+# Publique as regras
+firebase deploy --only firestore:rules
+
+# Publique os indexes
+firebase deploy --only firestore:indexes
+```
+
+---
+
+## 🔑 Como a Kamily acessa o painel
+
+1. Acesse: `/admin`
+2. Login: `kamily`
+3. Senha: `kamily123` (senha inicial)
+4. **No primeiro acesso, altere a senha:**
+   - Firebase Console > Authentication > Users
+   - Clique no usuário > **Reset password**
+   - Ou no próprio painel, vá em configurações de conta
+
+---
+
+## 🌐 Publicação na Vercel
+
+1. Faça push para o GitHub/GitLab
+2. Importe o projeto na [Vercel](https://vercel.com)
+3. Configure as variáveis de ambiente na Vercel (mesmas do `.env.local`)
+4. Deploy automático
+
+---
+
+## 📁 Estrutura do projeto
+
+```
+app/
+  page.tsx                    → Landing page pública
+  layout.tsx                  → Layout raiz
+  admin/
+    layout.tsx                → Layout admin (protegido)
+    login/page.tsx            → Tela de login
+    page.tsx                  → Dashboard
+    pre-inscricoes/page.tsx   → Lista de pré-inscrições
+    configuracoes/page.tsx    → Configurações do evento
+  politica-de-privacidade/
+    page.tsx
+
+components/
+  public/                     → Seções da landing page
+  layout/                     → Header e Footer
+  ui/                         → Elementos decorativos e reutilizáveis
+
+lib/
+  firebase/                   → Config, auth e Firestore
+  validations/                → Schema Zod
+  utils/                      → CEP, CSV, helpers
+
+hooks/
+  useAuth.tsx                 → Context de autenticação
+
+public/
+  images/logo-dvj.png        → Logo do congresso
+```
+
+---
+
+## 🔒 Segurança
+
+- Autenticação real via Firebase Authentication
+- Admin verificado por documento na coleção `admins/{uid}`
+- Regras do Firestore que impedem acesso não autorizado
+- Dados nunca expostos no frontend sem autenticação
+- Variáveis de ambiente para credenciais
+
+---
+
+## 📊 Banco de dados — Coleção `pre_inscricoes_dvj`
+
+```json
+{
+  "nomeCompleto": "string",
+  "telefone": "string (formatado)",
+  "telefoneNormalizado": "string (só números)",
+  "email": "string (lowercase)",
+  "endereco": {
+    "cep": "string",
+    "rua": "string",
+    "numero": "string",
+    "complemento": "string",
+    "bairro": "string",
+    "cidade": "string",
+    "estado": "string (UF)"
+  },
+  "igreja": "string",
+  "origem": "string",
+  "observacoes": "string",
+  "consentimentoPrivacidade": "boolean",
+  "consentimentoComunicacao": "boolean",
+  "status": "pre_inscrita | contatada | aguardando_confirmacao | confirmada | desistiu | arquivada",
+  "observacoesAdmin": "string",
+  "utm": { "source": "", "medium": "", "campaign": "", "content": "" },
+  "createdAt": "timestamp",
+  "updatedAt": "timestamp"
+}
+```
+
+---
+
+## 📧 Contato e suporte
+
+Para atualizar informações de contato (Instagram, WhatsApp, e-mail), acesse o painel:
+`/admin/configuracoes`
+
+---
+
+© 2026 DVJ — De Volta ao Jardim

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Não indexar área administrativa
+User-agent: *
+Disallow: /admin/
+
+Sitemap: https://seudominio.com/sitemap.xml
