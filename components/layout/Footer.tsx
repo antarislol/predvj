@@ -93,7 +93,7 @@ export default function Footer() {
             </h4>
             <div className="flex flex-col gap-3">
               <a
-                href="https://instagram.com/[INSTAGRAM DO DVJ]"
+                href="https://www.instagram.com/dvjconferencia_/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 text-sm transition-colors hover:text-[#59613A]"
@@ -101,10 +101,10 @@ export default function Footer() {
                 id="footer-instagram-link"
               >
                 <InstagramIcon size={16} color="#BE745B" />
-                @[Instagram do DVJ]
+                @dvjconferencia_
               </a>
               <a
-                href="https://wa.me/[WHATSAPP DA ORGANIZAÇÃO]"
+                href="https://wa.me/5533984569970"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 text-sm transition-colors hover:text-[#59613A]"
@@ -112,16 +112,16 @@ export default function Footer() {
                 id="footer-whatsapp-link"
               >
                 <MessageCircle size={16} color="#59613A" />
-                WhatsApp
+                WhatsApp (33) 98456-9970
               </a>
               <a
-                href="mailto:[E-MAIL DO DVJ]"
+                href="mailto:kamily@dvj.com.br"
                 className="flex items-center gap-2.5 text-sm transition-colors hover:text-[#59613A]"
                 style={{ color: "#8A8480", fontFamily: "'Montserrat', sans-serif" }}
                 id="footer-email-link"
               >
                 <Mail size={16} color="#B98942" />
-                [E-mail do DVJ]
+                kamily@dvj.com.br
               </a>
             </div>
 
