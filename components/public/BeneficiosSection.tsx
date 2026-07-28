@@ -41,25 +41,26 @@ export default function BeneficiosSection() {
         <SmallFlower size={40} color="#B98942" style={{ opacity: 0.25 }} />
       </div>
 
-      <div className="max-w-4xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-4xl mx-auto px-6 text-center">
+        <div className="flex flex-col gap-12 items-center">
           {/* Coluna esquerda - Texto */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
+            className="max-w-2xl mx-auto"
           >
-            <span className="selo mb-4 inline-flex">
+            <span className="selo mb-4 inline-flex mx-auto">
               <SmallFlower size={12} color="#B98942" /> Por que se inscrever?
             </span>
-            <h2 className="mt-4 mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1.7rem, 3.5vw, 2.4rem)", fontWeight: 600, color: "#3D3A36", lineHeight: 1.3 }}>
+            <h2 className="mt-4 mb-6 mx-auto" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1.7rem, 3.5vw, 2.4rem)", fontWeight: 600, color: "#3D3A36", lineHeight: 1.3 }}>
               Dê o primeiro passo para{" "}
               <span style={{ fontFamily: "'Great Vibes', cursive", fontSize: "clamp(2rem, 4.5vw, 3rem)", color: "#59613A" }}>
                 viver esse momento.
               </span>
             </h2>
 
-            <p className="mb-8" style={{ color: "#5C5751", lineHeight: 1.8, fontFamily: "'Montserrat', sans-serif", fontSize: "0.95rem" }}>
+            <p className="mb-8 mx-auto" style={{ color: "#5C5751", lineHeight: 1.8, fontFamily: "'Montserrat', sans-serif", fontSize: "0.95rem" }}>
               Ao preencher sua presença, você demonstra interesse em participar do DVJ
               e permite que a organização entre em contato assim que as próximas etapas
               forem liberadas.
@@ -67,7 +68,7 @@ export default function BeneficiosSection() {
 
             <button
               onClick={scrollToForm}
-              className="btn-primary"
+              className="btn-primary mx-auto"
               id="beneficios-cta-btn"
             >
               ✦ confirmar minha presença
@@ -76,22 +77,24 @@ export default function BeneficiosSection() {
 
           {/* Coluna direita - Benefícios */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
+            className="w-full max-w-lg mx-auto"
           >
             <div className="space-y-4 mb-8">
               {beneficios.map((beneficio, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                  className="flex items-start gap-3"
+                  className="flex items-center gap-3 justify-center text-center p-3 rounded-xl bg-white/50"
+                  style={{ border: "1px solid rgba(185,137,66,0.1)" }}
                 >
                   <CheckCircle2
                     size={20}
-                    className="flex-shrink-0 mt-0.5"
+                    className="flex-shrink-0"
                     style={{ color: "#59613A" }}
                   />
                   <p

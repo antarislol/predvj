@@ -39,14 +39,14 @@ export default function InformacoesSection() {
         </motion.div>
 
         {/* Grid de informações */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-5 mb-10 max-w-4xl mx-auto">
           {infoItems.map((item, index) => (
             <motion.div
               key={item.label}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="flex items-start gap-4 p-5 rounded-2xl"
+              className="flex flex-col items-center text-center gap-3 p-6 rounded-2xl flex-1 min-w-[200px]"
               style={{
                 background: "white",
                 border: "1px solid rgba(185,137,66,0.15)",
@@ -54,14 +54,14 @@ export default function InformacoesSection() {
               }}
             >
               <div
-                className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
+                className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
                 style={{ background: "rgba(89,97,58,0.08)" }}
               >
-                <item.icon size={18} color="#59613A" />
+                <item.icon size={22} color="#59613A" />
               </div>
               <div>
                 <p
-                  className="text-xs font-semibold tracking-wider uppercase mb-1"
+                  className="text-xs font-semibold tracking-wider uppercase mb-2"
                   style={{ color: "#8A8480", fontFamily: "'Montserrat', sans-serif" }}
                 >
                   {item.label}
@@ -71,7 +71,7 @@ export default function InformacoesSection() {
                   style={{
                     color: item.valor.startsWith("[") ? "#B98942" : "#3D3A36",
                     fontFamily: "'Cormorant Garamond', serif",
-                    fontSize: "1.05rem",
+                    fontSize: "1.15rem",
                     fontStyle: item.valor.startsWith("[") ? "italic" : "normal",
                   }}
                 >
