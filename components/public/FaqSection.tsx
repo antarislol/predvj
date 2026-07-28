@@ -47,7 +47,7 @@ function FaqItem({ pergunta, resposta, index }: { pergunta: string; resposta: st
     >
       <button
         onClick={() => setAberto(!aberto)}
-        className="w-full flex items-center justify-between p-5 text-left transition-colors hover:bg-[#F7F2EA]"
+        className="w-full flex flex-col items-center justify-center p-5 text-center transition-colors hover:bg-[#F7F2EA]"
         aria-expanded={aberto}
         id={`faq-${index}`}
         style={{ cursor: "pointer" }}
@@ -55,13 +55,12 @@ function FaqItem({ pergunta, resposta, index }: { pergunta: string; resposta: st
         <span
           style={{
             fontFamily: "'Cormorant Garamond', serif",
-            fontSize: "1.05rem",
+            fontSize: "1.15rem",
             fontWeight: 600,
-            color: "#3D3A36",
+            color: aberto ? "#59613A" : "#3D3A36",
             lineHeight: 1.4,
-            flex: 1,
-            paddingRight: "1rem",
           }}
+          className="mb-3"
         >
           {pergunta}
         </span>
@@ -77,13 +76,12 @@ function FaqItem({ pergunta, resposta, index }: { pergunta: string; resposta: st
       <AnimatePresence initial={false}>
         {aberto && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: aberto ? 1 : 0, height: aberto ? "auto" : 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
             <div
-              className="px-5 pb-5"
+              className="px-5 pb-5 text-center"
               style={{
                 borderTop: "1px solid rgba(185,137,66,0.1)",
                 paddingTop: "1rem",

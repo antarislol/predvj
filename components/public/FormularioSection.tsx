@@ -28,7 +28,7 @@ interface FormFieldProps {
 
 function FormField({ label, id, error, required, children }: FormFieldProps) {
   return (
-    <div className="flex flex-col gap-1.5">
+    <div className="flex flex-col gap-1.5 items-center text-center">
       <label
         htmlFor={id}
         style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.8rem", fontWeight: 600, color: "#5C5751", letterSpacing: "0.04em" }}
@@ -214,7 +214,7 @@ export default function FormularioSection() {
               </div>
             )}
 
-            <form onSubmit={handleSubmit(onSubmit)} noValidate>
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 text-center mx-auto max-w-xl" noValidate>
               {/* Dados pessoais */}
               <div className="mb-8">
                 <h3 className="mb-5 pb-3" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.3rem", fontWeight: 600, color: "#3D3A36", borderBottom: "1px solid rgba(185,137,66,0.2)" }}>
@@ -410,7 +410,7 @@ export default function FormularioSection() {
               <div className="mb-8 space-y-4">
                 {/* Consentimento obrigatório */}
                 <div>
-                  <label className="flex items-start gap-3 cursor-pointer group">
+                  <label className="flex flex-col items-center text-center gap-3 cursor-pointer group">
                     <input
                       id="consentimentoPrivacidade"
                       type="checkbox"
@@ -427,14 +427,14 @@ export default function FormularioSection() {
                     </span>
                   </label>
                   {errors.consentimentoPrivacidade && (
-                    <p className="flex items-center gap-1.5 mt-1 ml-8 text-xs" style={{ color: "#BE745B", fontFamily: "'Montserrat', sans-serif" }} role="alert">
+                    <p className="flex justify-center items-center gap-1.5 mt-2 text-xs" style={{ color: "#BE745B", fontFamily: "'Montserrat', sans-serif" }} role="alert">
                       <AlertCircle size={12} /> {errors.consentimentoPrivacidade.message}
                     </p>
                   )}
                 </div>
 
                 {/* Consentimento comunicação (opcional) */}
-                <label className="flex items-start gap-3 cursor-pointer">
+                <label className="flex flex-col items-center text-center gap-3 cursor-pointer">
                   <input
                     id="consentimentoComunicacao"
                     type="checkbox"
