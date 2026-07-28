@@ -31,14 +31,14 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   const [menuAberto, setMenuAberto] = useState(false);
 
   useEffect(() => {
-    if (!loading) {
+    if (!loading && pathname !== "/admin/login") {
       if (!user) {
         router.replace("/admin/login");
       } else if (!isAdmin) {
         signOut().then(() => router.replace("/admin/login"));
       }
     }
-  }, [user, isAdmin, loading, router]);
+  }, [user, isAdmin, loading, router, pathname]);
 
   if (loading) {
     return (
@@ -51,6 +51,10 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         </div>
       </div>
     );
+  }
+
+  if (pathname === "/admin/login") {
+    return <>{children}</>;
   }
 
   if (!user || !isAdmin) return null;
