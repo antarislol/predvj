@@ -31,13 +31,13 @@ export default function ApresentacaoSection() {
           <FloralDivider className="w-full max-w-sm mx-auto" />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="flex flex-col gap-12 lg:gap-16 items-center">
           {/* Coluna de texto */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-center md:text-left mx-auto max-w-lg md:max-w-none"
+            className="text-center mx-auto max-w-2xl"
           >
             <h2
               className="mb-6"
@@ -74,10 +74,9 @@ export default function ApresentacaoSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="mt-8 pl-0 md:pl-6 relative pt-4 md:pt-0"
-              style={{ borderLeft: "3px solid transparent" }}
+              className="mt-10 pt-6 relative inline-block mx-auto"
             >
-              <div className="absolute left-0 top-0 w-full h-[3px] md:w-[3px] md:h-full bg-[#B98942]" />
+              <div className="absolute left-1/2 -translate-x-1/2 top-0 w-16 h-[3px] bg-[#B98942] opacity-70" />
               <p
                 style={{
                   fontFamily: "'Cormorant Garamond', serif",
@@ -94,8 +93,8 @@ export default function ApresentacaoSection() {
 
           {/* Coluna visual */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative"
           >
