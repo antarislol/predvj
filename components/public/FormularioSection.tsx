@@ -469,7 +469,7 @@ export default function FormularioSection() {
                     ENVIANDO...
                   </>
                 ) : (
-                  "✦ ENVIAR MINHA PRÉ-INSCRIÇÃO"
+                  "✦ CONFIRMAR MINHA PRESENÇA"
                 )}
               </button>
 

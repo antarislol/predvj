@@ -8,7 +8,6 @@ import { SmallFlower } from "@/components/ui/FloralElements";
 
 const beneficios = [
   "Receber informações importantes sobre o congresso",
-  "Ser avisada sobre a abertura das inscrições oficiais",
   "Acompanhar novidades e atualizações do DVJ",
   "Receber orientações sobre programação, local e participação",
   "Facilitar o contato com a equipe de organização",
