@@ -146,7 +146,7 @@ export default function FormularioSection() {
         observacoes: data.observacoes?.trim() || "",
         consentimentoPrivacidade: data.consentimentoPrivacidade,
         consentimentoComunicacao: data.consentimentoComunicacao || false,
-        utm: Object.keys(utmParams).length > 0 ? utmParams : undefined,
+        ...(Object.keys(utmParams).length > 0 && { utm: utmParams }),
       });
 
       setEnviado(true);
