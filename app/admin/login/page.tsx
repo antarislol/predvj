@@ -25,7 +25,7 @@ export default function AdminLoginPage() {
       const adminData = await verificarAdmin(user.uid);
 
       if (!adminData) {
-        setErro("Acesso não autorizado. Verifique suas credenciais.");
+        setErro("Admin data not found. UID: " + user.uid);
         // Faz logout imediatamente
         const { signOut } = await import("@/lib/firebase/auth");
         await signOut();
@@ -44,7 +44,7 @@ export default function AdminLoginPage() {
       } else if (firebaseError.code === "auth/too-many-requests") {
         setErro("Muitas tentativas de acesso. Tente novamente mais tarde.");
       } else {
-        setErro("Erro ao acessar o painel. Tente novamente.");
+        setErro(`Erro: ${firebaseError.code || firebaseError.message || JSON.stringify(error)}`);
       }
     } finally {
       setCarregando(false);
