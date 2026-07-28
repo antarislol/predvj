@@ -34,7 +34,7 @@ export default function AdminLoginPage() {
 
       router.push("/admin");
     } catch (error: unknown) {
-      const firebaseError = error as { code?: string };
+      const firebaseError = error as { code?: string; message?: string };
       if (
         firebaseError.code === "auth/invalid-credential" ||
         firebaseError.code === "auth/wrong-password" ||
