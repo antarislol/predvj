@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { motion, AnimatePresence } from "framer-motion";
 import { Loader2, CheckCircle2, AlertCircle, ChevronDown } from "lucide-react";
 import { preInscricaoSchema, PreInscricaoFormData, formatarTelefone, normalizarTelefone, capitalizarNome } from "@/lib/validations/preInscricao";
-import { verificarDuplicidade, criarPreInscricao } from "@/lib/firebase/firestore";
+import { criarPreInscricao } from "@/lib/firebase/firestore";
 import { buscarCep } from "@/lib/utils/helpers";
 import { SmallFlower, FloralDivider } from "@/components/ui/FloralElements";
 
@@ -115,16 +115,6 @@ export default function FormularioSection() {
     try {
       const telefoneNorm = normalizarTelefone(data.telefone);
       const emailNorm = data.email.toLowerCase().trim();
-
-      // Verificar duplicidade
-      const duplicado = await verificarDuplicidade(emailNorm, telefoneNorm);
-      if (duplicado) {
-        setErroDuplicidade(
-          "Encontramos uma pré-inscrição vinculada a este telefone ou e-mail. Entre em contato com a organização caso precise atualizar seus dados."
-        );
-        setEnviando(false);
-        return;
-      }
 
       // UTM params
       const utmParams: Record<string, string> = {};
