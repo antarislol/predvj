@@ -7,7 +7,7 @@ import { Loader2, Save, Check } from "lucide-react";
 import { SmallFlower } from "@/components/ui/FloralElements";
 
 interface Configuracoes {
-  nomeCulto DVJ: string;
+  nomeCongresso: string;
   frasePrincipal: string;
   data: string;
   horario: string;
@@ -24,7 +24,7 @@ interface Configuracoes {
 }
 
 const CONFIG_DEFAULTS: Configuracoes = {
-  nomeCulto DVJ: "DVJ — De Volta ao Jardim",
+  nomeCongresso: "DVJ — De Volta ao Jardim",
   frasePrincipal: "Um chamado para retornar à essência, à presença e ao propósito de Deus.",
   data: "15/08/2026",
   horario: "16h",
@@ -80,7 +80,7 @@ export default function ConfiguracoesPage() {
   }
 
   const campos: { key: keyof Configuracoes; label: string; tipo?: string; placeholder?: string; rows?: number }[] = [
-    { key: "nomeCulto DVJ", label: "Nome do culto DVJ", placeholder: "DVJ — De Volta ao Jardim" },
+    { key: "nomeCongresso", label: "Nome do culto DVJ", placeholder: "DVJ — De Volta ao Jardim" },
     { key: "frasePrincipal", label: "Frase principal", tipo: "textarea", rows: 2, placeholder: "Um chamado para..." },
     { key: "data", label: "Data do evento", placeholder: "Ex: 15 de março de 2026" },
     { key: "horario", label: "Horário", placeholder: "Ex: 8h às 18h" },
