@@ -35,9 +35,18 @@ export default function Header() {
 
   return (
     <>
+      <div className="bg-[#1a1a1a] text-[#e5e5e5] text-[10px] md:text-xs py-1.5 px-4 flex justify-center items-center gap-2 uppercase z-[60] fixed top-0 left-0 right-0" style={{ fontFamily: "'Montserrat', sans-serif", letterSpacing: "0.05em" }}>
+        <span>Site produzido por</span>
+        <a href="https://www.instagram.com/improducoes.av/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-white transition-colors">
+          <span className="font-bold text-[#F59E0B]">IM</span>
+          <span className="font-bold">PRODUÇÕES</span>
+        </a>
+      </div>
+
       <header
-        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+        className="fixed left-0 right-0 z-50 transition-all duration-300"
         style={{
+          top: "28px",
           background: isScrolled
             ? "rgba(247, 242, 234, 0.97)"
             : "rgba(247, 242, 234, 0.9)",
@@ -95,7 +104,7 @@ export default function Header() {
       {menuOpen && (
         <div
           className="fixed inset-0 z-40 md:hidden"
-          style={{ top: "64px" }}
+          style={{ top: "92px" }}
         >
           <div
             className="absolute inset-0"

@@ -177,9 +177,8 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 transition-transform hover:scale-105 bg-white px-3 py-1.5 rounded-md shadow-sm border border-gray-100"
             >
-              <img src="/im-logo.png" alt="IM Produções Logo" className="h-6 w-auto object-contain" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.nextElementSibling?.classList.remove('hidden'); }} />
-              <span className="font-bold text-sm hidden" style={{ color: "#000", fontFamily: "'Montserrat', sans-serif" }}>
-                <span className="text-amber-500">IM</span> Produções
+              <span className="font-bold text-sm" style={{ color: "#000", fontFamily: "'Montserrat', sans-serif" }}>
+                <span className="text-[#F59E0B]">IM</span> PRODUÇÕES
               </span>
             </a>
           </div>
