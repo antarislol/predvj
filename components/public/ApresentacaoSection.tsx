@@ -60,7 +60,7 @@ export default function ApresentacaoSection() {
                 ao lugar onde tudo começou: a presença de Deus.
               </p>
               <p style={{ color: "#5C5751", lineHeight: 1.8, fontFamily: "'Montserrat', sans-serif", fontSize: "0.95rem" }}>
-                O DVJ — De Volta ao Jardim — é um congresso criado para reunir mulheres em um tempo
+                O DVJ — De Volta ao Jardim — é um culto DVJ criado para reunir mulheres em um tempo
                 de Palavra, comunhão, louvor e renovação espiritual.
               </p>
               <p style={{ color: "#5C5751", lineHeight: 1.8, fontFamily: "'Montserrat', sans-serif", fontSize: "0.95rem" }}>

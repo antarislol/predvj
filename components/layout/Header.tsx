@@ -8,7 +8,7 @@ import { DVJLogo } from "@/components/ui/FloralElements";
 const navLinks = [
   { href: "#inicio", label: "Início" },
   { href: "#sobre", label: "Sobre o DVJ" },
-  { href: "#congresso", label: "O Congresso" },
+  { href: "#culto DVJ", label: "O Culto DVJ" },
   { href: "#pre-inscricao", label: "Confirmação de presença" },
   { href: "#duvidas", label: "Dúvidas" },
 ];

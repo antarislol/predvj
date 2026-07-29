@@ -42,7 +42,7 @@ export default function PilaresSection() {
 
   return (
     <section
-      id="congresso"
+      id="culto DVJ"
       ref={ref}
       className="py-20 md:py-28 relative overflow-hidden"
       style={{ background: "linear-gradient(180deg, #EDE0D4 0%, #E8DED1 100%)" }}
@@ -74,7 +74,7 @@ export default function PilaresSection() {
           <span
             className="selo mb-4 inline-flex"
           >
-            <SmallFlower size={12} color="#B98942" /> O Congresso
+            <SmallFlower size={12} color="#B98942" /> O Culto DVJ
           </span>
           <h2
             className="mt-4"

@@ -7,7 +7,7 @@ import { Loader2, Save, Check } from "lucide-react";
 import { SmallFlower } from "@/components/ui/FloralElements";
 
 interface Configuracoes {
-  nomeCongresso: string;
+  nomeCulto DVJ: string;
   frasePrincipal: string;
   data: string;
   horario: string;
@@ -24,7 +24,7 @@ interface Configuracoes {
 }
 
 const CONFIG_DEFAULTS: Configuracoes = {
-  nomeCongresso: "DVJ — De Volta ao Jardim",
+  nomeCulto DVJ: "DVJ — De Volta ao Jardim",
   frasePrincipal: "Um chamado para retornar à essência, à presença e ao propósito de Deus.",
   data: "15/08/2026",
   horario: "16h",
@@ -80,14 +80,14 @@ export default function ConfiguracoesPage() {
   }
 
   const campos: { key: keyof Configuracoes; label: string; tipo?: string; placeholder?: string; rows?: number }[] = [
-    { key: "nomeCongresso", label: "Nome do congresso", placeholder: "DVJ — De Volta ao Jardim" },
+    { key: "nomeCulto DVJ", label: "Nome do culto DVJ", placeholder: "DVJ — De Volta ao Jardim" },
     { key: "frasePrincipal", label: "Frase principal", tipo: "textarea", rows: 2, placeholder: "Um chamado para..." },
     { key: "data", label: "Data do evento", placeholder: "Ex: 15 de março de 2026" },
     { key: "horario", label: "Horário", placeholder: "Ex: 8h às 18h" },
     { key: "local", label: "Local / Nome do espaço", placeholder: "Ex: Centro de Convenções..." },
     { key: "endereco", label: "Endereço completo", placeholder: "Rua, número, cidade, UF" },
     { key: "programacao", label: "Programação", tipo: "textarea", rows: 4, placeholder: "Descreva a programação do evento..." },
-    { key: "instagram", label: "Instagram (@ ou link)", placeholder: "@dvjcongresso" },
+    { key: "instagram", label: "Instagram (@ ou link)", placeholder: "@dvjculto DVJ" },
     { key: "whatsapp", label: "WhatsApp (só números)", placeholder: "5511999999999" },
     { key: "email", label: "E-mail de contato", placeholder: "contato@dvj.com.br" },
     { key: "mensagemConfirmacao", label: "Mensagem de confirmação após inscrição", tipo: "textarea", rows: 3 },
@@ -101,7 +101,7 @@ export default function ConfiguracoesPage() {
           Configurações
         </h1>
         <p className="text-sm mt-1" style={{ color: "#8A8480", fontFamily: "'Montserrat', sans-serif" }}>
-          Gerencie as informações do congresso exibidas no site.
+          Gerencie as informações do culto DVJ exibidas no site.
         </p>
       </div>
 

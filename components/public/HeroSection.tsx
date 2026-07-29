@@ -93,7 +93,7 @@ export default function HeroSection() {
           className="flex justify-center mb-6"
         >
           <span className="selo">
-            <SmallFlower size={12} color="#B98942" /> Congresso de Mulheres
+            <SmallFlower size={12} color="#B98942" /> Culto DVJ
           </span>
         </motion.div>
 
@@ -119,7 +119,7 @@ export default function HeroSection() {
           style={{ color: "#8A8480", fontFamily: "'Montserrat', sans-serif" }}
         >
           Prepare o coração para viver um tempo de comunhão, crescimento e renovação.
-          Confirme sua presença e acompanhe as próximas informações do congresso.
+          Confirme sua presença e acompanhe as próximas informações do culto DVJ.
         </motion.p>
 
         {/* Selo confirmações de presença abertas */}
@@ -167,18 +167,6 @@ export default function HeroSection() {
           </button>
         </motion.div>
 
-        {/* Nota de rodapé */}
-        <motion.p
-          custom={6}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          className="text-xs max-w-sm mx-auto leading-relaxed"
-          style={{ color: "#8A8480", fontFamily: "'Montserrat', sans-serif" }}
-        >
-          A confirmação de presença demonstra seu interesse em participar, mas ainda não representa
-          a confirmação definitiva da vaga.
-        </motion.p>
       </div>
 
       {/* Seta scroll */}

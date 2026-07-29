@@ -13,7 +13,7 @@ import ChamadaFinalSection from "@/components/public/ChamadaFinalSection";
 export const metadata: Metadata = {
   title: "DVJ — De Volta ao Jardim | Confirmação de presença",
   description:
-    "Confirme sua presença para o DVJ — De Volta ao Jardim, um congresso de mulheres voltado para comunhão, Palavra, presença e propósito.",
+    "Confirme sua presença para o DVJ — De Volta ao Jardim, um culto DVJ voltado para comunhão, Palavra, presença e propósito.",
 };
 
 export default function Home() {

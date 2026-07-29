@@ -1,5 +1,5 @@
 # DVJ — De Volta ao Jardim 🌿
-**Landing page de pré-inscrição para o Congresso de Mulheres DVJ**
+**Landing page de pré-inscrição para o Culto DVJ DVJ**
 
 ---
 
@@ -131,7 +131,7 @@ hooks/
   useAuth.tsx                 → Context de autenticação
 
 public/
-  images/logo-dvj.png        → Logo do congresso
+  images/logo-dvj.png        → Logo do culto DVJ
 ```
 
 ---

@@ -33,7 +33,7 @@ export default function PoliticaPrivacidadePage() {
               1. Quem somos
             </h2>
             <p>
-              O DVJ — De Volta ao Jardim é um congresso cristão voltado para mulheres. Este site é utilizado exclusivamente
+              O DVJ — De Volta ao Jardim é um culto DVJ cristão voltado para mulheres. Este site é utilizado exclusivamente
               para a coleta de confirmações de presença e comunicação com as interessadas em participar do evento.
             </p>
           </section>
@@ -62,7 +62,7 @@ export default function PoliticaPrivacidadePage() {
               Os dados são coletados exclusivamente para:
             </p>
             <ul className="list-disc list-inside space-y-1 mt-2">
-              <li>Organização e planejamento do congresso DVJ</li>
+              <li>Organização e planejamento do culto DVJ DVJ</li>
               <li>Envio de informações sobre as próximas etapas de inscrição</li>
               <li>Comunicação sobre datas, local e programação do evento</li>
               <li>Contato direto com a participante via WhatsApp ou e-mail</li>

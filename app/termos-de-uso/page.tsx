@@ -33,7 +33,7 @@ export default function TermosUsoPage() {
             </h2>
             <p>
               Este site tem como finalidade exclusiva a realização de confirmações de presença para o DVJ — De Volta ao Jardim,
-              um congresso cristão voltado para mulheres.
+              um culto DVJ cristão voltado para mulheres.
             </p>
           </section>
 
@@ -42,7 +42,7 @@ export default function TermosUsoPage() {
               2. Confirmação de presença
             </h2>
             <p>
-              A confirmação de presença realizada por meio deste site não garante vaga no congresso.
+              A confirmação de presença realizada por meio deste site não garante vaga no culto DVJ.
               Ela representa apenas a manifestação de interesse em participar do evento.
               A confirmação da inscrição dependerá das etapas a serem divulgadas pela organização.
             </p>

@@ -17,7 +17,7 @@ const faqItems = [
   },
   {
     pergunta: "Por que preciso informar meus dados?",
-    resposta: "Os dados serão utilizados para organização do congresso e envio das informações necessárias sobre as próximas etapas.",
+    resposta: "Os dados serão utilizados para organização do culto DVJ e envio das informações necessárias sobre as próximas etapas.",
   },
   {
     pergunta: "Posso atualizar meus dados depois?",

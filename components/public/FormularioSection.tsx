@@ -419,7 +419,7 @@ export default function FormularioSection() {
                       {...register("consentimentoPrivacidade")}
                     />
                     <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.8rem", color: "#5C5751", lineHeight: 1.6 }}>
-                      Declaro que as informações fornecidas são verdadeiras e autorizo o uso dos meus dados para contato e organização do congresso, conforme a{" "}
+                      Declaro que as informações fornecidas são verdadeiras e autorizo o uso dos meus dados para contato e organização do culto DVJ, conforme a{" "}
                       <a href="/politica-de-privacidade" target="_blank" rel="noopener noreferrer" style={{ color: "#59613A", textDecoration: "underline" }}>
                         Política de Privacidade
                       </a>.{" "}
@@ -473,9 +473,6 @@ export default function FormularioSection() {
                 )}
               </button>
 
-              <p className="mt-4 text-center text-xs" style={{ color: "#8A8480", fontFamily: "'Montserrat', sans-serif" }}>
-                Esta confirmação de presença ainda não confirma sua vaga no congresso.
-              </p>
             </form>
           </div>
         </motion.div>
@@ -517,12 +514,6 @@ function ConfirmacaoEnviada() {
             Seus dados foram registrados e a equipe do DVJ entrará em contato quando as
             próximas etapas da inscrição forem liberadas.
           </p>
-
-          <div className="mb-8 p-4 rounded-xl" style={{ background: "rgba(185,137,66,0.08)", border: "1px solid rgba(185,137,66,0.2)" }}>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.8rem", color: "#B98942", fontWeight: 600 }}>
-              ⚠️ Esta confirmação de presença ainda não confirma sua vaga no congresso.
-            </p>
-          </div>
 
           <div className="flex flex-col gap-3">
             <button

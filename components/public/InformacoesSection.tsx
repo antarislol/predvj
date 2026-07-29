@@ -33,7 +33,7 @@ export default function InformacoesSection() {
           <h2 className="mt-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 600, color: "#3D3A36" }}>
             Detalhes do{" "}
             <span style={{ fontFamily: "'Great Vibes', cursive", fontSize: "clamp(2.2rem, 5vw, 3.4rem)", color: "#59613A" }}>
-              Congresso
+              Culto DVJ
             </span>
           </h2>
         </motion.div>
@@ -105,6 +105,30 @@ export default function InformacoesSection() {
           >
             As informações completas sobre a programação e a confirmação das inscrições
             serão divulgadas em breve. Fique atenta aos canais oficiais do DVJ.
+          </p>
+        </motion.div>
+
+        {/* Lanche Compartilhado */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="text-center p-6 rounded-2xl mt-6"
+          style={{
+            background: "linear-gradient(135deg, rgba(89,97,58,0.08), rgba(185,137,66,0.05))",
+            border: "1px solid rgba(89,97,58,0.2)",
+          }}
+        >
+          <h3 className="mb-2" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.5rem", fontWeight: 600, color: "#3D3A36" }}>Lanche Compartilhado</h3>
+          <p
+            style={{
+              fontFamily: "'Montserrat', sans-serif",
+              fontSize: "1rem",
+              color: "#5C5751",
+              lineHeight: 1.6,
+            }}
+          >
+            Cada pessoa deve levar um lanche para compartilharmos em um momento especial de comunhão ao final do culto.
           </p>
         </motion.div>
 

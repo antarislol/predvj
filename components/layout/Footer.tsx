@@ -37,13 +37,13 @@ export default function Footer() {
               className="text-xs mb-2"
               style={{ color: "#8A8480", fontFamily: "'Montserrat', sans-serif", letterSpacing: "0.05em", textTransform: "uppercase", fontWeight: 600 }}
             >
-              Congresso de Mulheres
+              Culto DVJ
             </p>
             <p
               className="text-sm mt-4"
               style={{ color: "#8A8480", fontFamily: "'Montserrat', sans-serif", lineHeight: 1.7 }}
             >
-              Um congresso de mulheres para retornar à essência, à presença e ao propósito de Deus.
+              Um culto DVJ para retornar à essência, à presença e ao propósito de Deus.
             </p>
           </div>
 
@@ -59,7 +59,7 @@ export default function Footer() {
               {[
                 { href: "#inicio", label: "Início" },
                 { href: "#sobre", label: "Sobre o DVJ" },
-                { href: "#congresso", label: "O Congresso" },
+                { href: "#culto DVJ", label: "O Culto DVJ" },
                 { href: "#pre-inscricao", label: "Confirmação de presença" },
                 { href: "#duvidas", label: "Dúvidas" },
               ].map((link) => (
@@ -157,7 +157,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div
-          className="pt-8 text-center"
+          className="pt-8 pb-4 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left"
           style={{ borderTop: "1px solid rgba(185,137,66,0.15)" }}
         >
           <p
@@ -166,6 +166,23 @@ export default function Footer() {
           >
             © 2026 DVJ — De Volta ao Jardim. Todos os direitos reservados.
           </p>
+          
+          <div className="flex items-center gap-3">
+            <span className="text-xs text-[#8A8480]" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+              Produzido por:
+            </span>
+            <a
+              href="https://www.instagram.com/improducoes.av/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 transition-transform hover:scale-105 bg-white px-3 py-1.5 rounded-md shadow-sm border border-gray-100"
+            >
+              <img src="/im-logo.png" alt="IM Produções Logo" className="h-6 w-auto object-contain" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.nextElementSibling?.classList.remove('hidden'); }} />
+              <span className="font-bold text-sm hidden" style={{ color: "#000", fontFamily: "'Montserrat', sans-serif" }}>
+                <span className="text-amber-500">IM</span> Produções
+              </span>
+            </a>
+          </div>
         </div>
       </div>
     </footer>

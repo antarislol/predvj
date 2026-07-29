@@ -7,7 +7,7 @@ import { CheckCircle2 } from "lucide-react";
 import { SmallFlower } from "@/components/ui/FloralElements";
 
 const beneficios = [
-  "Receber informações importantes sobre o congresso",
+  "Receber informações importantes sobre o culto DVJ",
   "Acompanhar novidades e atualizações do DVJ",
   "Receber orientações sobre programação, local e participação",
   "Facilitar o contato com a equipe de organização",
